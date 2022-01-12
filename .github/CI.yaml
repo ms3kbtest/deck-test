@@ -15,8 +15,8 @@ jobs:
       id: decK_ping
       uses: ./
       with:
-        command: "ping"
-        options: "--headers --kong-addr ${{ secrets.KONG_ADDR }}"
+        command: "ping --headers --kong-addr ${{ secrets.KONG_ADDR }}"
+        # options: "--headers --kong-addr ${{ secrets.KONG_ADDR }}"
     - name: decK validate
       id: decK_validate
       uses: ./
