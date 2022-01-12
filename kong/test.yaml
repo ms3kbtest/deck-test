@@ -8,7 +8,7 @@ services:
   port: 80
   protocol: http
   read_timeout: 60000
-  retries: 5
+  retries: 11
   routes:
   - https_redirect_status_code: 426
     name: mockbin-route
