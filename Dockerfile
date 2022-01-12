@@ -1,5 +1,7 @@
 FROM kong/deck
- 
-COPY entrypoint.sh /entrypoint.sh
- 
-ENTRYPOINT [ "/entrypoint.sh" ]
+USER root
+
+RUN apk add git
+
+ENTRYPOINT ["tail"]
+CMD ["-f","/dev/null"]
