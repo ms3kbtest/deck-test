@@ -22,12 +22,12 @@ jobs:
       uses: ./
       with:
         command: "validate"
-        options: "--kong-addr ${{ secrets.KONG_ADDR }} --headers ${{ secrets.KONG_HEADERS }}" 
+        options: "--kong-addr ${{ secrets.KONG_ADDR }} --headers \"kong-admin-token:kong\"" 
         kong_workspaces: "kong"
     - name: decK diff
       id: decK_diff
       uses: ./
       with:
         command: "diff"
-        options: "--kong-addr ${{ secrets.KONG_ADDR }} --headers ${{ secrets.KONG_HEADERS }}" 
+        options: "--kong-addr ${{ secrets.KONG_ADDR }} --headers \"kong-admin-token:kong\"" 
         kong_workspaces: "kong"
