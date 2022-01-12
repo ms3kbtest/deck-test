@@ -7,7 +7,7 @@ inputs:
     default: 'ping'
   kong_workspaces:
     description: 'Kong workspaces where yaml files are located'
-    required: true
+    required: false
     default: 'kong'
   options:
     description: 'Option parameters for a decK command'
